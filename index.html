@@ -270,8 +270,9 @@
                     if (i >= 3) {console.log(i);
                         sliderFlex.scrollLeft = slideOne.clientWidth + (i - 3) * (slideOne.clientWidth + 32);
                         slideOne.style.marginLeft = '-32px'
-                    } else if (i < 3) {
+                    } else {
                         sliderFlex.scrollLeft = 0;
+                        slideOne.style.marginLeft = '0px'
                     }
                 }
 
