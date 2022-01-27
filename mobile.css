@@ -537,7 +537,7 @@ html, body {
 .avatar-wrapper {
     position: relative;
     width: 100%;
-    max-width: 361px;
+    max-width: 371px;
     height: 139px;
 }
 
@@ -589,7 +589,7 @@ html, body {
 }
 
 .avatar-wrapper-1 {
-    margin-left: 110px;
+    margin-left: 130px;
     margin-top: 181px;
 }
 
