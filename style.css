@@ -5,14 +5,16 @@ html, body {
     
 }
 
+.visually-hidden-mobile {
+    display: none !important;
+}
+
 .header-wraper {
-    /* padding-left: 145px;
-    padding-right: 132px; */
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-auto-rows: minmax(78px, auto);
     max-width: 1400px;
-    margin: 20px auto 0px;
+    margin: 0 auto 0;
 }
 
 .logo-group {
@@ -59,15 +61,20 @@ html, body {
 }
 
 .top-menu {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 132px;
+    justify-content: center;
+    padding: 0;
     margin: auto 0px auto 0px;
 }
 
 .top-menu button {
     margin-right: 14px;
+}
+
+.user-navigation {
+    align-self: center;
+    padding: 0 90px 0 0;
 }
 
 .sign-in {
@@ -475,7 +482,7 @@ html, body {
 
 
 .hero {
-    margin-top: 157px;
+    margin-top: 57px;
     grid-column: 1/3;
     /* position: relative; */
     background: url(img/bg-hero.svg) no-repeat center center;
@@ -486,7 +493,7 @@ html, body {
 .avatar-wrapper {
     position: relative;
     width: 100%;
-    max-width: 331px;
+    max-width: 371px;
     height: 139px;
 }
 
@@ -500,8 +507,7 @@ html, body {
 .word-cloud,
 .mini-circle {
     position: absolute;
-    /* width: 98px;
-    height: 98px; */
+
 }
 
 .avatar-collection-top {
@@ -521,7 +527,7 @@ html, body {
 }
 
 .avatar-wrapper-2 p {
-    right: 100px;
+    right: 120px;
 }
 
 .avatar-wrapper-3 p {
@@ -529,15 +535,17 @@ html, body {
 }
 
 .avatar-wrapper-4 p {
-    right: 75px;
+    right: 69px;
+    position: absolute;
+
 }
 
 .avatar-wrapper-5 p  {
-    right: 60px;
+    right: 120px;
 }
 
 .avatar-wrapper-1 {
-    margin-left: 110px;
+    margin-left: 130px;
     margin-top: 181px;
 }
 
@@ -557,34 +565,33 @@ html, body {
 
 .avatar-wrapper-2 {
     margin-right: 240px;
-    margin-top: 157px;
+    margin-top: 97px;
 }
 
 .avatar-2 {
-    right: 0;
+    right: 30px;
     bottom: 0;
 }
 
 .word-cloud-2 {
-    right: 57px;
+    right: 77px;
 }
 
 .mini-circle-2 {
-    right:  65px;
-    top: 58px;
+    right:  89px;
+    top: 50px;
 }
 
 .avatar-collection-bottom {
     display: flex;
-    /* flex-wrap: nowrap; */
     justify-content: space-between;
     width: 100%;
-    height: 515px;
+    max-height: 260px;
 }
 
 .avatar-wrapper-3 {
     margin-left: 110px;
-    margin-top: 143px;
+    margin-top: 50px;
 }
 
 .avatar-3 {
@@ -602,8 +609,8 @@ html, body {
 }
 
 .avatar-wrapper-4 {
-    /* margin-left: 354px; */
-    margin-top: 241px;
+    margin-left: 394px;
+    margin-top: 50px;
 }
 
 .avatar-4 {
@@ -612,7 +619,7 @@ html, body {
 }
 
 .word-cloud-4 {
-    right: 57px;
+    right: 51px;
 }
 
 .mini-circle-4 {
@@ -622,7 +629,7 @@ html, body {
 
 .avatar-wrapper-5 {
     margin-right: 150px;
-    margin-top: 119px;
+    margin-top: 0px;
 }
 
 .avatar-5 {
@@ -631,12 +638,13 @@ html, body {
 }
 
 .word-cloud-5 {
-    left: 57px;
+    left: 40px;
+    top: 0;
 }
 
 .mini-circle-5 {
-    right: 65px;
-    top: 58px;
+    right: 70px;
+    top: 55px;
 }
 
 .slider {

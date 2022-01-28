@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' media='(min-width: 300px) and (max-width: 1024px)' href='mobile.css'>
+    <link rel="stylesheet" media='(min-width: 1025px) and (max-width: 1900px)' href="style.css">
+    <!-- <link rel="stylesheet" href="mobile.css" media="only screen and (max-width:740px)"> -->
+    <!-- <link rel="stylesheet" href="mobile.css" media="only screen and (min-device-width : 300px) and (max-device-width : 1024px)"> -->
+    <!-- <link rel="stylesheet" href="mobile.css"> -->
     <title>Document</title>
 </head>
 <body>
     <header class="header-wraper">
         <div class="logo-group">
             <img class="logo" src="img/logo.svg" alt="Logo">
-            <img class="logo-text" src="img/Productly.svg" alt="Productly">
+            <img class="logo-text" src="img/Productly.svg" alt="Productly" style="margin-top: 5px;">
         </div>
         <nav class="top-menu">
-            <ul>
-                <!-- <li><a class="list-items" href="#">Product</a></li> -->
-                <!-- <li><a class="list-items" href="#">Customers</a></li> -->
-                <li><a class="list-items" href="#">Pricing</a></li>
-                <li><a class="list-items" href="#">Resources</a></li>
+
+            <div class="burger-icon visually-hidden-mobile">
+                <span class="black-line first-line"></span>
+                <span class="black-line second-line"></span>
+                <span class="black-line third-line"></span>
+                <span class="black-line fourth-line"></span>
+
+            </div>
+            
+            <ul class="burger-menu visually-hidden-mobile">
+                <li class="burger-menu-item">Product</li>
+                <li class="burger-menu-item">Customers</li>
+                <li class="burger-menu-item">Pricing</li>
+                <li class="burger-menu-item">Resources</li>
             </ul>
+
+
+            <ul class="visually-hidden">
+                <li><a class="list-items visually-hidden" href="#">Product</a></li>
+                <li><a class="list-items visually-hidden" href="#">Customers</a></li>
+                <li><a class="list-items visually-hidden" href="#">Pricing</a></li>
+                <li><a class="list-items visually-hidden" href="#">Resources</a></li>
+            </ul>
+        </nav>
+        <section class="user-navigation">
             <button class="sign-in">Sign In</button>
             <button class="sign-up">Sign Up</button>
-        </nav>
+        </section>
+
+<script>
+
+    let switcherMenu = document.querySelector('.burger-icon');
+    let rollerMenu = document.querySelector('.burger-menu');
+
+
+    switcherMenu.addEventListener('click', function(event) {
+        switcherMenu.classList.toggle('burger-onclick');
+        rollerMenu.classList.toggle('burger-active');
+    });
+
+</script>
+
     </header>
     <main class="wrapper">
         <div class="top-left">
@@ -89,11 +126,11 @@
             <b>Custom Design designers</b>
             <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
         </section>
-        <div class="professionals-img">
+        <div class="professionals-img visually-hidden">
             <img src="img/professionals-img.svg">
         </div>
 
-        <div class="product-img">
+        <div class="product-img visually-hidden">
             <img src="img/product-managers.svg" alt="Product managers">
         </div>
         <section class="product-text">
@@ -121,7 +158,7 @@
             <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
         </section>
 
-        <div class="marketers-img">
+        <div class="marketers-img visually-hidden">
             <img src="img/marketers.svg" alt="">
         </div>
 
@@ -142,15 +179,17 @@
                     <img class="mini-circle mini-circle-3" src="img/hero/mini-circle.svg" alt="">
                 </div>
 
-                <div class="avatar-wrapper avatar-wrapper-4"><img class="avatar avatar-4" src="img/hero/avatar-4.svg" alt="">
-                    <img class="word-cloud word-cloud-4" src="img/hero/words-cloud-left.svg" alt=""><p>I will define the profile of your users</p>
-                    <img class="mini-circle mini-circle-4" src="img/hero/mini-circle.svg" alt="">
-                </div>
+                
 
                 <div class="avatar-wrapper avatar-wrapper-5"><img class="avatar avatar-5" src="img/hero/avatar-3.svg" alt="">
                         <img class="word-cloud word-cloud-5" src="img/hero/words-cloud-left.svg" alt=""><p>I can prototype your app</p>
-                        <!-- <img class="mini-circle mini-circle-5" src="img/hero/mini-circle.svg" alt=""> -->
+                        <img class="mini-circle mini-circle-5" src="img/hero/mini-circle.svg" alt="">
                 </div>
+            </div>
+
+            <div class="avatar-wrapper avatar-wrapper-4"><img class="avatar avatar-4" src="img/hero/avatar-4.svg" alt="">
+                <img class="word-cloud word-cloud-4" src="img/hero/words-cloud-left.svg" alt=""><p>I will define the profile of your users</p>
+                <img class="mini-circle mini-circle-4" src="img/hero/mini-circle.svg" alt="">
             </div>
         </section>
         
@@ -306,7 +345,7 @@
         } 
     </script>
     <footer>
-        <img src="img/line-bottom.svg" alt="">
+        <img class="divider" src="img/line-bottom.svg" alt="">
         <section class="footer-underline">
             <div class="footer-left-block">
                 <div class="logo-footer"><img src="img/logo.svg" alt=""><img src="img/Productly.svg" alt="">
