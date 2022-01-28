@@ -12,18 +12,51 @@
     <header class="header-wraper">
         <div class="logo-group">
             <img class="logo" src="img/logo.svg" alt="Logo">
-            <img class="logo-text" src="img/Productly.svg" alt="Productly">
+            <img class="logo-text" src="img/Productly.svg" alt="Productly" style="margin-top: 5px;">
         </div>
         <nav class="top-menu">
-            <ul>
-                <!-- <li><a class="list-items" href="#">Product</a></li> -->
-                <!-- <li><a class="list-items" href="#">Customers</a></li> -->
-                <li><a class="list-items" href="#">Pricing</a></li>
-                <li><a class="list-items" href="#">Resources</a></li>
+
+            <div class="burger-icon">
+                <span class="black-line first-line"></span>
+                <span class="black-line second-line"></span>
+                <span class="black-line third-line"></span>
+                <span class="black-line fourth-line"></span>
+
+            </div>
+            
+            <ul class="burger-menu">
+                <li class="burger-menu-item">Product</li>
+                <li class="burger-menu-item">Customers</li>
+                <li class="burger-menu-item">Pricing</li>
+                <li class="burger-menu-item">Resources</li>
             </ul>
+
+
+            <ul class="visually-hidden">
+                <li><a class="list-items visually-hidden" href="#">Product</a></li>
+                <li><a class="list-items visually-hidden" href="#">Customers</a></li>
+                <li><a class="list-items visually-hidden" href="#">Pricing</a></li>
+                <li><a class="list-items visually-hidden" href="#">Resources</a></li>
+            </ul>
+        </nav>
+        <section class="user-navigation">
             <button class="sign-in">Sign In</button>
             <button class="sign-up">Sign Up</button>
-        </nav>
+        </section>
+
+<script>
+
+    let switcherMenu = document.querySelector('.burger-icon');
+    let rollerMenu = document.querySelector('.burger-menu');
+
+
+    switcherMenu.addEventListener('click', function(event) {
+        switcherMenu.classList.toggle('burger-onclick');
+        rollerMenu.classList.toggle('burger-active');
+    });
+
+</script>
+
     </header>
     <main class="wrapper">
         <div class="top-left">
