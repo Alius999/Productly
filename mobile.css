@@ -69,7 +69,7 @@ html, body {
 .burger-menu {
     position: absolute;
     list-style-type: none;
-    width: 200px;
+    width: 100%;
     font-size: 0px;
     max-height: 0px;
     overflow: hidden;
