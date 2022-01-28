@@ -306,13 +306,33 @@
             
             switchSpot[i].onclick = function(event) {
                         
-                    if (i >= 3) {console.log(i);
-                        sliderFlex.scrollLeft = slideOne.clientWidth + (i - 3) * (slideOne.clientWidth + 32);
-                        slideOne.style.marginLeft = '-32px'
-                    } else {
-                        sliderFlex.scrollLeft = 0;
-                        slideOne.style.marginLeft = '0px'
+                const mediaQueryMin = window.matchMedia('(min-width: 1025px)');
+                const mediaQueryMax = window.matchMedia('(max-width: 1024px)');
+
+
+                    if (mediaQueryMin.matches) {
+
+                        if (i >= 3) {
+                            console.log(i);
+                            sliderFlex.scrollLeft = slideOne.clientWidth + (i - 3) * (slideOne.clientWidth + 32);
+                            slideOne.style.marginLeft = '-32px'
+                        } else {
+                            sliderFlex.scrollLeft = 0;
+                            slideOne.style.marginLeft = '0px'
+                        } 
                     }
+
+                    if (mediaQueryMax.matches) {
+                        if (i >= 2) {
+                            console.log(i);
+                            sliderFlex.scrollLeft = slideOne.clientWidth + (i - 2) * (slideOne.clientWidth + 32);
+                            slideOne.style.marginLeft = '-32px'
+                        } else {
+                            sliderFlex.scrollLeft = 0;
+                            slideOne.style.marginLeft = '0px'
+                        }  
+                    }
+
                 }
 
         }
